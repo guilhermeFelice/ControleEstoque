@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+>
+	<h:head>
+		<meta charset="UTF-8" />
+		<title>Editar Produto</title>
+	</h:head>
+	<h:body>
+		<h:form>
+			 <p>Buscar por ID:
+			 	<b>
+			 		<h:inputText id="txtCodigoProduto" value="#{EditarProdutoMB.codigo}" class="entrada" />
+			 	</b>
+			 	<b>
+					<h:commandButton id="buscaPorID" value="Busca"  action="#{EditarProdutoMB.buscaPorId()}"   />
+				</b>
+			</p> 
+		</h:form> 
+		<br/>
+		<h:form>
+			<p>
+				<h:inputHidden id="txtIdProd" value="#{EditarProdutoMB.codigo}" class="entrada" /> 
+			</p>
+			<p>Nome do Produto:
+				<h:inputText id="txtNome" value="#{EditarProdutoMB.nome}" class="entrada" /> 
+			</p>
+			<p>Quantidade do produto:
+				<h:inputText id="txtQuantidade" value="#{EditarProdutoMB.unidade}" class="entrada" /> 
+			</p>
+			<p>
+				<b>
+					<h:commandButton id="update" value="Atualizar" action="#{EditarProdutoMB.updateProd()}" />
+				</b>
+				<b>
+					<h:commandButton id="voltar" value="Voltar" action="index" />
+				</b> 
+			</p>
+		</h:form> 
+
+	</h:body>
+</html>
